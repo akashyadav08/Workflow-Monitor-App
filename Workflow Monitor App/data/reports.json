@@ -1,0 +1,88 @@
+[
+  {
+    "generated_at": "2026-03-11T13:37:47.158292",
+    "date": "2026-03-11",
+    "summary": {
+      "headline": "8 subtasks completed \u2014 exceptional output",
+      "detail": "You crushed it across AllocQ \u2014 Build Agentic Team (Testing Base), Job Applications \u2014 Australia (Mercor, Seek, LinkedIn), IMC Prosperity 4 \u2014 Trading Competition Prep. Days like this are the ones that compound into breakthroughs. Well earned.",
+      "tone": "celebration"
+    },
+    "wins": {
+      "has_wins": true,
+      "message": "You completed 8 subtasks across 3 different tasks (Job Applications \u2014 Australia (Mercor, Seek, LinkedIn), IMC Prosperity 4 \u2014 Trading Competition Prep, AllocQ \u2014 Build Agentic Team (Testing Base)). Breadth AND depth \u2014 you're advancing on multiple fronts while keeping each one moving.",
+      "items": [
+        {
+          "task_title": "Job Applications \u2014 Australia (Mercor, Seek, LinkedIn)",
+          "completed_today": [
+            "Optimize LinkedIn profile for Australian job market",
+            "Set up Seek job alerts for target roles",
+            "Prepare tailored resume for AU format",
+            "Follow up on any pending applications"
+          ],
+          "count_today": 4,
+          "overall_progress": "4/10 (40%)"
+        },
+        {
+          "task_title": "IMC Prosperity 4 \u2014 Trading Competition Prep",
+          "completed_today": [
+            "Study orderbook mechanics: L2 data, bid-ask dynamics, depth",
+            "Study market microstructure (Bouchaud, Harris)"
+          ],
+          "count_today": 2,
+          "overall_progress": "2/15 (13%)"
+        },
+        {
+          "task_title": "AllocQ \u2014 Build Agentic Team (Testing Base)",
+          "completed_today": [
+            "Define agent roles needed for AllocQ",
+            "Research and compare agentic frameworks (Claude SDK, LangGraph, CrewAI, AutoGen)"
+          ],
+          "count_today": 2,
+          "overall_progress": "2/9 (22%)"
+        }
+      ]
+    },
+    "tactical_reframes": {
+      "has_misses": true,
+      "message": "1 task didn't see progress today. That's not failure \u2014 it's prioritization. You can't do everything every day, and research on decision fatigue (Baumeister, 2011) confirms that selective focus produces better outcomes than thin coverage across too many fronts.",
+      "items": [
+        {
+          "task_title": "FRM Level 2 Exam Preparation",
+          "category": "frm_exam",
+          "reframe": "FRM preparation is cumulative. One missed day in a months-long study plan is noise, not signal. Your knowledge doesn't decay overnight \u2014 it consolidates during rest (Walker, 2017).",
+          "tomorrow_action": "Start with 5 flashcards from previously studied material. Easy wins rebuild study momentum faster than jumping into new content.",
+          "next_subtask": "Set up Anki deck for FRM L2 with spaced repetition",
+          "total_remaining": 17
+        }
+      ]
+    },
+    "tomorrow_plan": {
+      "plan_items": [
+        {
+          "type": "momentum",
+          "title": "Ride the momentum on Job Applications \u2014 Australia (Mercor, Seek, LinkedIn)",
+          "rationale": "You made real progress here today. The goal gradient effect (Hull, 1932) means your brain is primed to continue \u2014 effort increases as you get closer to completion.",
+          "suggested_subtasks": [
+            "Complete Mercor profile and assessments",
+            "Research companies hiring remotely in AU"
+          ]
+        }
+      ],
+      "implementation_intention": "When I sit down tomorrow morning, the FIRST thing I will do is open Job Applications \u2014 Australia (Mercor, Seek, LinkedIn) and work on the next incomplete subtask for 15 minutes before checking anything else.",
+      "principle": "Gollwitzer (1999): Pre-committing to a specific if-then plan ('When X happens, I will do Y') doubles to triples follow-through rates. Setting your intention tonight means tomorrow's decision is already made."
+    },
+    "broader_outlook": {
+      "has_history": false,
+      "message": "This is your first nightly report. From tomorrow, you'll start seeing trends across days \u2014 completion patterns, momentum shifts, and your consistency streak. The data starts now.",
+      "streak": 0,
+      "trend": null,
+      "task_coverage": null,
+      "consistency_note": null
+    },
+    "anchor": {
+      "quote": "The only way to do great work is to love what you do.",
+      "author": "Steve Jobs",
+      "reflection": "You showed up today for work that matters to you. That's not discipline \u2014 that's alignment. Tomorrow, lean into the parts that pull your curiosity hardest."
+    }
+  }
+]

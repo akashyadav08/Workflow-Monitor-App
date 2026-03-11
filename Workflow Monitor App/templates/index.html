@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workflow Monitor</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-left">
+      <h1>Workflow <span>Monitor</span></h1>
+      <span id="current-block-badge" class="current-block-badge">Loading...</span>
+    </div>
+    <div class="header-right">
+      <span id="clock" class="clock">--:--:-- --</span>
+      <button id="mode-toggle" class="mode-toggle" onclick="toggleMode()">
+        <span class="mode-icon">☀️</span> Morning
+      </button>
+    </div>
+  </header>
+
+  <!-- Main 3-Column Layout -->
+  <main class="main">
+
+    <!-- Left: Schedule -->
+    <aside class="schedule-panel">
+      <div class="panel-title">Today's Schedule</div>
+      <div id="schedule-list">
+        <div class="loading"><span class="loading-dot">Loading schedule...</span></div>
+      </div>
+    </aside>
+
+    <!-- Center: Tasks -->
+    <section class="task-panel">
+      <div class="panel-title-row">
+        <div class="panel-title">Tasks by Priority</div>
+        <button class="btn-add-task" onclick="openAddTaskModal()">+ Add Task</button>
+      </div>
+      <div id="task-cards" class="task-cards">
+        <div class="loading"><span class="loading-dot">Loading tasks...</span></div>
+      </div>
+    </section>
+
+    <!-- Right: Motivation + Resources -->
+    <aside class="motivation-panel">
+      <button class="briefing-btn" onclick="loadBriefing()">
+        Daily Motivational Briefing
+      </button>
+      <div class="nightly-report-row">
+        <button class="nightly-report-btn" onclick="showNightlyReport()">
+          Nightly Anchor Report
+        </button>
+        <button class="report-history-btn" onclick="showReportHistory()">
+          Past Reports
+        </button>
+      </div>
+
+      <div class="tab-nav">
+        <button class="tab-btn active" data-tab="motivation" onclick="switchTab('motivation')">Motivation</button>
+        <button class="tab-btn" data-tab="resources" onclick="switchTab('resources')">Resources</button>
+      </div>
+
+      <!-- Motivation Tab -->
+      <div id="tab-motivation" class="tab-content active">
+        <button class="refresh-btn" onclick="refreshMotivation()">
+          Refresh Motivation
+        </button>
+        <div id="motivation-content">
+          <div class="loading"><span class="loading-dot">Select a task...</span></div>
+        </div>
+      </div>
+
+      <!-- Resources Tab -->
+      <div id="tab-resources" class="tab-content">
+        <div id="resources-content">
+          <div class="resource-item">Click "Resources" on a task to view curated materials.</div>
+        </div>
+      </div>
+    </aside>
+
+  </main>
+
+  <!-- Star Chart -->
+  <section class="star-chart-section" id="star-chart-section">
+    <div class="star-chart-header">
+      <div class="star-chart-title" id="star-chart-month">Loading...</div>
+      <div class="star-chart-legend">
+        <span class="legend-item"><span class="legend-star dim"></span> No progress</span>
+        <span class="legend-item"><span class="legend-star low"></span> Light</span>
+        <span class="legend-item"><span class="legend-star med"></span> Solid</span>
+        <span class="legend-item"><span class="legend-star high"></span> Strong</span>
+        <span class="legend-item"><span class="legend-star max"></span> Peak</span>
+      </div>
+    </div>
+    <div class="star-chart-weekdays">
+      <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+    </div>
+    <div class="star-chart-grid" id="star-chart-grid"></div>
+  </section>
+
+  <!-- Footer: Daily Progress -->
+  <footer class="daily-progress" id="daily-progress">
+    <div class="stat"><span>Loading...</span></div>
+  </footer>
+
+  <!-- Task Modal -->
+  <div id="task-modal" class="modal-overlay" onclick="if(event.target===this)closeTaskModal()">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 id="modal-title">Add Task</h2>
+        <button class="modal-close" onclick="closeTaskModal()">&times;</button>
+      </div>
+      <form id="task-form" onsubmit="event.preventDefault(); saveTask()">
+        <input type="hidden" id="form-task-id" value="">
+        <div class="form-group">
+          <label for="form-title">Title</label>
+          <input type="text" id="form-title" required placeholder="Task title">
+        </div>
+        <div class="form-group">
+          <label for="form-description">Description</label>
+          <textarea id="form-description" rows="2" placeholder="Brief description"></textarea>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="form-deadline">Deadline</label>
+            <input type="date" id="form-deadline">
+          </div>
+          <div class="form-group">
+            <label for="form-category">Category</label>
+            <select id="form-category">
+              <option value="general">General</option>
+              <option value="job_applications">Job Applications</option>
+              <option value="imc_competition">IMC Competition</option>
+              <option value="frm_exam">FRM Exam</option>
+              <option value="allocq">AllocQ</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="form-urgency">Urgency (1-10)</label>
+            <input type="number" id="form-urgency" min="1" max="10" value="5">
+          </div>
+          <div class="form-group">
+            <label for="form-impact">Impact (1-10)</label>
+            <input type="number" id="form-impact" min="1" max="10" value="5">
+          </div>
+          <div class="form-group">
+            <label for="form-cognitive-load">Cognitive Load (1-10)</label>
+            <input type="number" id="form-cognitive-load" min="1" max="10" value="5">
+          </div>
+          <div class="form-group">
+            <label for="form-dependencies">Dependencies (1-10)</label>
+            <input type="number" id="form-dependencies" min="1" max="10" value="3">
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="button" class="btn-secondary" onclick="closeTaskModal()">Cancel</button>
+          <button type="submit" class="btn-primary" id="form-submit-btn">Save Task</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Nightly Report Modal -->
+  <div id="nightly-report-modal" class="modal-overlay" onclick="if(event.target===this)closeNightlyReport()">
+    <div class="modal nightly-report-modal">
+      <div class="modal-header">
+        <h2 id="nightly-report-title">Your Nightly Anchor</h2>
+        <button class="modal-close" onclick="closeNightlyReport()">&times;</button>
+      </div>
+      <div id="nightly-report-body" class="nightly-report-body">
+        <div class="loading"><span class="loading-dot">Generating your report...</span></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+[
+  {
+    "task_id": "jobs001",
+    "task_title": "Job Applications \u2014 Australia (Mercor, Seek, LinkedIn)",
+    "subtask_index": 0,
+    "subtask_name": "Optimize LinkedIn profile for Australian job market",
+    "completed_at": "2026-03-11T02:18:38.379695"
+  },
+  {
+    "task_id": "jobs001",
+    "task_title": "Job Applications \u2014 Australia (Mercor, Seek, LinkedIn)",
+    "subtask_index": 0,
+    "subtask_name": "Optimize LinkedIn profile for Australian job market",
+    "completed_at": "2026-03-11T02:19:31.981568"
+  },
+  {
+    "task_id": "jobs001",
+    "task_title": "Job Applications \u2014 Australia (Mercor, Seek, LinkedIn)",
+    "subtask_index": 0,
+    "subtask_name": "Optimize LinkedIn profile for Australian job market",
+    "completed_at": "2026-03-11T02:19:59.309985"
+  },
+  {
+    "task_id": "jobs001",
+    "task_title": "Job Applications \u2014 Australia (Mercor, Seek, LinkedIn)",
+    "subtask_index": 0,
+    "subtask_name": "Optimize LinkedIn profile for Australian job market",
+    "completed_at": "2026-03-11T02:20:01.682722"
+  },
+  {
+    "task_id": "jobs001",
+    "task_title": "Job Applications \u2014 Australia (Mercor, Seek, LinkedIn)",
+    "subtask_index": 0,
+    "subtask_name": "Optimize LinkedIn profile for Australian job market",
+    "completed_at": "2026-03-11T02:20:03.240759"
+  },
+  {
+    "task_id": "jobs001",
+    "task_title": "Job Applications \u2014 Australia (Mercor, Seek, LinkedIn)",
+    "subtask_index": 2,
+    "subtask_name": "Set up Seek job alerts for target roles",
+    "completed_at": "2026-03-11T02:25:11.077358"
+  },
+  {
+    "task_id": "jobs001",
+    "task_title": "Job Applications \u2014 Australia (Mercor, Seek, LinkedIn)",
+    "subtask_index": 3,
+    "subtask_name": "Prepare tailored resume for AU format",
+    "completed_at": "2026-03-11T02:25:15.115805"
+  },
+  {
+    "task_id": "jobs001",
+    "task_title": "Job Applications \u2014 Australia (Mercor, Seek, LinkedIn)",
+    "subtask_index": 8,
+    "subtask_name": "Follow up on any pending applications",
+    "completed_at": "2026-03-11T10:23:52.484542"
+  },
+  {
+    "task_id": "imc0001",
+    "task_title": "IMC Prosperity 4 \u2014 Trading Competition Prep",
+    "subtask_index": 1,
+    "subtask_name": "Study orderbook mechanics: L2 data, bid-ask dynamics, depth",
+    "completed_at": "2026-03-11T11:07:57.310399"
+  },
+  {
+    "task_id": "imc0001",
+    "task_title": "IMC Prosperity 4 \u2014 Trading Competition Prep",
+    "subtask_index": 3,
+    "subtask_name": "Study market microstructure (Bouchaud, Harris)",
+    "completed_at": "2026-03-11T11:08:02.229185"
+  },
+  {
+    "task_id": "alcq001",
+    "task_title": "AllocQ \u2014 Build Agentic Team (Testing Base)",
+    "subtask_index": 0,
+    "subtask_name": "Define agent roles needed for AllocQ",
+    "completed_at": "2026-03-11T13:25:07.038739"
+  },
+  {
+    "task_id": "alcq001",
+    "task_title": "AllocQ \u2014 Build Agentic Team (Testing Base)",
+    "subtask_index": 1,
+    "subtask_name": "Research and compare agentic frameworks (Claude SDK, LangGraph, CrewAI, AutoGen)",
+    "completed_at": "2026-03-11T13:31:40.491930"
+  },
+  {
+    "task_id": "alcq001",
+    "task_title": "AllocQ \u2014 Build Agentic Team (Testing Base)",
+    "subtask_index": 3,
+    "subtask_name": "Build first agent prototype",
+    "completed_at": "2026-03-11T13:39:17.608902"
+  }
+]

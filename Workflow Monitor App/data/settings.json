@@ -1,0 +1,13 @@
+{
+  "energy_mode": "morning",
+  "work_start": "09:30",
+  "work_end": "20:00",
+  "family_call": {
+    "start": "16:00",
+    "end": "16:30"
+  },
+  "break_duration_minutes": 15,
+  "lunch_duration_minutes": 60,
+  "deep_work_block_minutes": 120,
+  "review_block_minutes": 15
+}
